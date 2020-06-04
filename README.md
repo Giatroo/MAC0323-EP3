@@ -5,4 +5,4 @@ Nesse EP, basicamente temos a tarefa de fazer um autômato não-determinístico 
 a linguagem de uma Regex. Ou seja, dada uma Regex e uma sequência de palavras, criar um algoritmo
 para determinar se essas palavras são ou não reconhecidas pela Regular Expression.
 
-Uma **descrição detalha do problema** pode ser encontrada no arquivo [ep3.pdf](https://github.com/Giatroo/MAC0323-EP1/blob/master/ep3.pdf).
+Uma **descrição detalha do problema** pode ser encontrada no arquivo [ep3.pdf](https://github.com/Giatroo/MAC0323-EP3/blob/master/ep3.pdf).
