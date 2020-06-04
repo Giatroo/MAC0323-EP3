@@ -1,0 +1,9 @@
+digraph foo {
+	"0 - (" -> "1 - A" [label=" "; color=grey];
+	"0 - (" -> "4 - *" [label=" "; color=grey];
+	"1 - A" -> "2 - B" [label="A"];
+	"2 - B" -> "3 - )" [label="B"];
+	"3 - )" -> "4 - *" [label=" "; color=grey];
+	"4 - *" -> "0 - (" [label=" "; color=grey];
+	"4 - *" -> "5 -  " [label=" "; color=grey];
+}

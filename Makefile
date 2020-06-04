@@ -1,5 +1,5 @@
 CC = g++
-FLAGS = -Wall -g -O0
+FLAGS = -Wall -Wno-sign-compare -g -O0
 OBJ = ./obj
 
 all : main

@@ -13,8 +13,7 @@ const std::string special = "+*[]()|";
 
 // Definição da classe do grafo =====================================
 class myGraph {
-  // private:
-  public:
+  private:
 	// A lista do conteúdo de cada vértice (o char associado ao vértice)
 	// Pode ser um char especial (tipo *, |, +, '(') ou não.
 	std::vector<char> vertice;
@@ -26,9 +25,17 @@ class myGraph {
 
 	long unsigned int V; // Tamanho do grafo (número de vértices)
 
+  std::string displayEdge(long unsigned int i);
+
   public:
 	// O grafo é construíto a partir de uma regex dada
 	myGraph();
 	myGraph(std::string regex);
+
+  bool match(std::string word);
+  void dfs(int source, std::vector<int> &v, std::vector<bool> &visited);
+
+  void print();
+  void output();
 };
 
