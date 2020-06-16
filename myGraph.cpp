@@ -81,6 +81,10 @@ myGraph::myGraph(std::string regex) {
 						adj[i - 1].push_back(std::make_pair(i, 0));
 					}
 					break;
+        case '.':
+          // Criaremos uma aresta para frente sem custo
+          adj[i].push_back(std::make_pair(i+1, 0));
+          break;
 			}
 		}
 	}
@@ -130,7 +134,7 @@ bool myGraph::match(std::string word) {
 
 		any = false;
 		for (j = 0; j < T.size(); j++) {
-			if (vertice[T[j]] == word[i]) {
+			if (vertice[T[j]] == word[i] || vertice[T[j]] == '.') {
 				S.push_back(T[j] + 1);
 				any = true;
 			}
@@ -140,6 +144,7 @@ bool myGraph::match(std::string word) {
 		if (!any) return false;
 	}
 
+  for (j = 0; j < visited.size(); j++) visited[j] = false;
 	for (j = 0; j < S.size(); j++) dfs(S[j], T, visited);
 
 	finalstate = false;
@@ -180,3 +185,4 @@ void myGraph::output() {
 	system("dot -Tpng graph.gv -o graph.png");
 	system("display graph.png");
 }
+

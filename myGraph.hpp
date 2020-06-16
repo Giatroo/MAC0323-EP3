@@ -25,6 +25,10 @@ class myGraph {
 
 	long unsigned int V; // Tamanho do grafo (número de vértices)
 
+  // dfs utilizada pelo método math
+  void dfs(int source, std::vector<int> &v, std::vector<bool> &visited);
+
+  // Função utilizada pelo método output
   std::string displayEdge(long unsigned int i);
 
   public:
@@ -32,10 +36,12 @@ class myGraph {
 	myGraph();
 	myGraph(std::string regex);
 
+  // Método para ver se a palavra pertence à linguagem da regex ou não
   bool match(std::string word);
-  void dfs(int source, std::vector<int> &v, std::vector<bool> &visited);
 
+  // Função que imprime o grafo em texto
   void print();
+  // Função que mostra visualmente o grafo
   void output();
 };
 
